@@ -1,0 +1,19 @@
+//Automatic Update Settings for /etc/cron.daily/Apt
+
+//Enable Update and Upgrade
+APT::Periodic::Enable "1";
+
+//Update all packages every day
+APT::Periodic::Update-Package-Lists "1";
+
+//Download new upgrades once a day
+APT::Periodic::Download-Upgradeable-Packages "1";
+
+//Automatically update once a day
+APT::Periodic::Unattended-Upgrade "1";
+
+//Clean up the downloaded files once a month
+APT::Periodic::AutocleanInterval "30";
+
+//Give updates on what it's done
+APT::Periodic::Verbose "2";
